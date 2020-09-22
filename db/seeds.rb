@@ -2,6 +2,12 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 
+# Reset All Data First
+User.delete_all
+Coach.delete_all
+Review.delete_all
+Appointment.delete_all
+
 coaches = Coach.create([
     {
         name: "Maya Nicole",
