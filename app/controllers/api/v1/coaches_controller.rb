@@ -48,14 +48,14 @@ module Api
 
             # Strong params
             def coach_params
-                params.require(:coach).permit(:name, :image_url, :description, :age, :tagline, :likes)
+                params.require(:coach).permit(:name, :image_url, :description, :age, :tagline, :likes, :score)
             end
 
             # Also include any associated data to the json payload
             # Maybe I do not need to do this, for now I keep it
             def options 
-                # @options ||= {include: [:appointments, :reviews]}
-                @options ||= {include: %i[reviews]}
+                @options ||= {include: [:appointments, :reviews]}
+                # @options ||= {include: %i[reviews]}
 
             end
         end
