@@ -81,7 +81,9 @@ const Coach = (props) => {
   let reviews;
   if (loaded && coach.included) {
     reviews = coach.included.map((item, index) => {
-      return <Review key={index} attributes={item.attributes} />;
+      if (item.type === 'review') {
+        return <Review key={index} attributes={item.attributes} />;
+      }
     });
   }
 

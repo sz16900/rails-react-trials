@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import styled from 'styled-components';
-// import Rating from '../Rating/Rating';
+import Rating from '../Rating/Rating';
 
 const Card = styled.div`
   border: 1px solid #efefef;
@@ -59,7 +59,7 @@ const Coach = (props) => {
         />
       </CoachLogo>
       <CoachName>{props.attributes.name}</CoachName>
-      {/* <Rating score={props.attributes.avg_score} /> */}
+      <Rating score={props.attributes.avg_score} />
       <LinkWrapper>
         <Link to={'/coaches/' + props.attributes.slug}>View Coach</Link>
       </LinkWrapper>

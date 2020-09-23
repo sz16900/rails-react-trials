@@ -1,5 +1,5 @@
 import React from 'react';
-// import Rating from '../Rating/Rating';
+import Rating from '../Rating/Rating';
 import styled from 'styled-components';
 
 const Card = styled.div`
@@ -65,9 +65,9 @@ const Review = (props) => {
   const { score, title, description } = props.attributes;
   return (
     <Card>
-      {/* <RatingContainer>
+      <RatingContainer>
         <Rating score={score} />
-      </RatingContainer> */}
+      </RatingContainer>
       <Title>{title}</Title>
       <Description>{description}</Description>
     </Card>
