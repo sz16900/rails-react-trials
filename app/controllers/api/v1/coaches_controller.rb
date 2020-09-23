@@ -54,7 +54,9 @@ module Api
             # Also include any associated data to the json payload
             # Maybe I do not need to do this, for now I keep it
             def options 
-                @options ||= {include: [:appointments, :reviews]}
+                # @options ||= {include: [:appointments, :reviews]}
+                @options ||= {include: %i[reviews]}
+
             end
         end
     end
